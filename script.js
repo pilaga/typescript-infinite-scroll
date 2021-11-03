@@ -53,5 +53,17 @@ async function getPhotos() {
     }
 }
 
+//check if scrolling near bottom of page
+window.addEventListener('scroll', (event) => {
+    //window.innerHeight - total height of window
+    //window.scrollY - position of vertical scroll
+    //body.offsetHeight - total height of document
+    if(window.innerHeight + window.scrollY 
+        >= document.body.offsetHeight - 1000) {
+        console.log();
+        getPhotos();
+    }
+});
+
 //on load
 getPhotos();
