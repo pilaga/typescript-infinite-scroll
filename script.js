@@ -9,7 +9,7 @@ let photos_array = [];
 //unsplash API
 //count - The number of photos to return. (Default: 1; max: 30)
 //topics - Public topic ID(‘s) to filter selection. If multiple, comma-separated
-const count = 30;
+const count = 5;
 const apiKey = 'iO7SEah7t2HgBtjQePvtHrfmVM9lMOC8SiOmem1Cx8k';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
@@ -20,6 +20,7 @@ function imageLoaded() {
         ready = true;
         imagesLoaded = 0;        
         loader.hidden = true;
+        count = 30; //increase count after initial load
     }
 }
 
